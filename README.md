@@ -1,2 +1,2 @@
-# anazetesis
+# Anazētēsis
 Anazētēsis - Ricerca
