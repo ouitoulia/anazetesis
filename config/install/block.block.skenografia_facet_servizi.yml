@@ -1,0 +1,28 @@
+langcode: it
+status: true
+dependencies:
+  config:
+    - facets.facet.servizi
+  module:
+    - facets
+    - system
+  theme:
+    - skenografia
+id: skenografia_facet_servizi
+theme: skenografia
+region: sidebar_first
+weight: -6
+provider: null
+plugin: 'facet_block:servizi'
+settings:
+  id: 'facet_block:servizi'
+  label: Servizi
+  label_display: visible
+  provider: facets
+  context_mapping: {  }
+  block_id: skenografia_facet_servizi
+visibility:
+  request_path:
+    id: request_path
+    negate: false
+    pages: /risultati-ricerca

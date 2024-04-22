@@ -1,0 +1,28 @@
+langcode: it
+status: true
+dependencies:
+  config:
+    - facets.facet.scuola
+  module:
+    - facets
+    - system
+  theme:
+    - skenografia
+id: skenografia_facet_scuola
+theme: skenografia
+region: sidebar_first
+weight: 0
+provider: null
+plugin: 'facet_block:scuola'
+settings:
+  id: 'facet_block:scuola'
+  label: Scuola
+  label_display: visible
+  provider: facets
+  context_mapping: {  }
+  block_id: skenografia_facet_scuola
+visibility:
+  request_path:
+    id: request_path
+    negate: false
+    pages: /risultati-ricerca

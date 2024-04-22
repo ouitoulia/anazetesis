@@ -1,0 +1,75 @@
+langcode: it
+status: true
+dependencies:
+  config:
+    - core.entity_view_mode.node.search_index
+    - field.field.node.scheda_didattica.body
+    - field.field.node.scheda_didattica.field_abstract
+    - field.field.node.scheda_didattica.field_argomenti
+    - field.field.node.scheda_didattica.field_competenze
+    - field.field.node.scheda_didattica.field_copertina
+    - field.field.node.scheda_didattica.field_durata
+    - field.field.node.scheda_didattica.field_extra_info
+    - field.field.node.scheda_didattica.field_grado_di_istruzione
+    - field.field.node.scheda_didattica.field_libri_di_testo
+    - field.field.node.scheda_didattica.field_materie
+    - field.field.node.scheda_didattica.field_obiettivi
+    - field.field.node.scheda_didattica.field_persona_responsabile
+    - node.type.scheda_didattica
+  module:
+    - text
+    - user
+id: node.scheda_didattica.search_index
+targetEntityType: node
+bundle: scheda_didattica
+mode: search_index
+content:
+  body:
+    type: text_default
+    label: hidden
+    settings: {  }
+    third_party_settings: {  }
+    weight: 1
+    region: content
+  field_abstract:
+    type: basic_string
+    label: hidden
+    settings: {  }
+    third_party_settings: {  }
+    weight: 0
+    region: content
+  field_materie:
+    type: entity_reference_label
+    label: hidden
+    settings:
+      link: false
+    third_party_settings: {  }
+    weight: 2
+    region: content
+  field_obiettivi:
+    type: text_default
+    label: hidden
+    settings: {  }
+    third_party_settings: {  }
+    weight: 3
+    region: content
+  field_persona_responsabile:
+    type: entity_reference_label
+    label: hidden
+    settings:
+      link: false
+    third_party_settings: {  }
+    weight: 4
+    region: content
+hidden:
+  field_argomenti: true
+  field_competenze: true
+  field_copertina: true
+  field_durata: true
+  field_extra_info: true
+  field_grado_di_istruzione: true
+  field_libri_di_testo: true
+  langcode: true
+  links: true
+  search_api_excerpt: true
+  toc_js: true
