@@ -1,6 +1,6 @@
 {
     "name": "ouitoulia/anazetesis",
-    "description": "Anazētēsis è un modulo Drupal che gestisce la anazetesis sul sito.",
+    "description": "Anazētēsis (Ricerca) è un modulo drupal che gestisce search api, le viste e i blocchi usate\nper presentare i risultati di ricerche sui siti delle scuole.",
     "type": "drupal-module",
     "license": "GPL-3.0-only",
     "homepage": "https://github.com/ouitoulia/anazetesis",

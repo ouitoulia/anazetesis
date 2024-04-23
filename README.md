@@ -5,7 +5,7 @@
 ![Packagist Dependency Version](https://img.shields.io/packagist/dependency-v/ouitoulia/anazetesis/drupal/core-recommended?style=for-the-badge)
 ![Packagist Downloads](https://img.shields.io/packagist/dt/ouitoulia/anazetesis?style=for-the-badge)
 
-Anazētēsis - Anazētēsis (Ricerca) è un modulo drupal che gestisce search api, le viste e i blocchi usate
+Anazētēsis (Ricerca) è un modulo drupal che gestisce search api, le viste e i blocchi usate
 per presentare i risultati di ricerche sui siti delle scuole.
 
 ## Requisiti
