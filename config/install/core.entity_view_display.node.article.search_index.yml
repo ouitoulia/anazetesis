@@ -1,0 +1,51 @@
+langcode: it
+status: true
+dependencies:
+  config:
+    - core.entity_view_mode.node.search_index
+    - field.field.node.article.body
+    - field.field.node.article.field_abstract
+    - field.field.node.article.field_argomenti
+    - field.field.node.article.field_copertina
+    - field.field.node.article.field_eventi
+    - field.field.node.article.field_extra_info
+    - field.field.node.article.field_luoghi
+    - field.field.node.article.field_persona_responsabile
+    - field.field.node.article.field_persone
+    - field.field.node.article.field_tipologia_notizia
+    - node.type.article
+  module:
+    - text
+    - user
+id: node.article.search_index
+targetEntityType: node
+bundle: article
+mode: search_index
+content:
+  body:
+    type: text_default
+    label: hidden
+    settings: {  }
+    third_party_settings: {  }
+    weight: 1
+    region: content
+  field_abstract:
+    type: basic_string
+    label: hidden
+    settings: {  }
+    third_party_settings: {  }
+    weight: 0
+    region: content
+hidden:
+  field_argomenti: true
+  field_copertina: true
+  field_eventi: true
+  field_extra_info: true
+  field_luoghi: true
+  field_persona_responsabile: true
+  field_persone: true
+  field_tipologia_notizia: true
+  langcode: true
+  links: true
+  search_api_excerpt: true
+  toc_js: true

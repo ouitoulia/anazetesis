@@ -1,0 +1,28 @@
+{
+    "name": "ouitoulia/anazetesis",
+    "description": "Anazētēsis è un modulo Drupal che gestisce la anazetesis sul sito.",
+    "type": "drupal-module",
+    "license": "GPL-3.0-only",
+    "homepage": "https://github.com/ouitoulia/anazetesis",
+    "authors": [
+        {
+            "name": "Pietro Arturo Panetta",
+            "homepage":"https://www.drupal.org/u/arturopanetta",
+            "role": "Maintainer"
+        },
+        {
+            "name": "Maurizio Cavalletti",
+            "homepage":"https://www.drupal.org/u/maurizio_akabit",
+            "role": "Co-Maintainer"
+        }
+    ],
+    "support": {
+        "issues": "https://github.com/ouitoulia/anazetesis/issues",
+        "source": "https://github.com/ouitoulia/anazetesis"
+    },
+    "minimum-stability": "dev",
+    "prefer-stable": true,
+    "require": {
+        "drupal/core-recommended": "^10"
+    }
+}

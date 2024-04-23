@@ -1,0 +1,99 @@
+langcode: it
+status: true
+dependencies:
+  config:
+    - core.entity_view_mode.node.search_index
+    - field.field.node.finanziamento.body
+    - field.field.node.finanziamento.field_abstract
+    - field.field.node.finanziamento.field_argomenti
+    - field.field.node.finanziamento.field_codice_cup
+    - field.field.node.finanziamento.field_codice_identificativo
+    - field.field.node.finanziamento.field_collaborazioni
+    - field.field.node.finanziamento.field_copertina
+    - field.field.node.finanziamento.field_data_fine
+    - field.field.node.finanziamento.field_data_inizio
+    - field.field.node.finanziamento.field_extra_info
+    - field.field.node.finanziamento.field_importo_finanziamento
+    - field.field.node.finanziamento.field_link
+    - field.field.node.finanziamento.field_persona_responsabile
+    - field.field.node.finanziamento.field_persone
+    - field.field.node.finanziamento.field_persone_esterne
+    - field.field.node.finanziamento.field_stato_progetto
+    - field.field.node.finanziamento.field_struttura_responsabile
+    - field.field.node.finanziamento.field_timeline
+    - field.field.node.finanziamento.field_tipologia_finanziamento
+    - node.type.finanziamento
+  module:
+    - entity_reference_revisions
+    - text
+    - user
+id: node.finanziamento.search_index
+targetEntityType: node
+bundle: finanziamento
+mode: search_index
+content:
+  body:
+    type: text_default
+    label: hidden
+    settings: {  }
+    third_party_settings: {  }
+    weight: 1
+    region: content
+  field_abstract:
+    type: basic_string
+    label: hidden
+    settings: {  }
+    third_party_settings: {  }
+    weight: 0
+    region: content
+  field_codice_cup:
+    type: string
+    label: hidden
+    settings:
+      link_to_entity: false
+    third_party_settings: {  }
+    weight: 2
+    region: content
+  field_codice_identificativo:
+    type: string
+    label: hidden
+    settings:
+      link_to_entity: false
+    third_party_settings: {  }
+    weight: 3
+    region: content
+  field_collaborazioni:
+    type: entity_reference_label
+    label: hidden
+    settings:
+      link: true
+    third_party_settings: {  }
+    weight: 4
+    region: content
+  field_extra_info:
+    type: entity_reference_revisions_entity_view
+    label: hidden
+    settings:
+      view_mode: default
+      link: ''
+    third_party_settings: {  }
+    weight: 5
+    region: content
+hidden:
+  field_argomenti: true
+  field_copertina: true
+  field_data_fine: true
+  field_data_inizio: true
+  field_importo_finanziamento: true
+  field_link: true
+  field_persona_responsabile: true
+  field_persone: true
+  field_persone_esterne: true
+  field_stato_progetto: true
+  field_struttura_responsabile: true
+  field_timeline: true
+  field_tipologia_finanziamento: true
+  langcode: true
+  links: true
+  search_api_excerpt: true
+  toc_js: true

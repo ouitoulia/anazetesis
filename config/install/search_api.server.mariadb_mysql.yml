@@ -1,0 +1,14 @@
+langcode: it
+status: true
+dependencies:
+  module:
+    - search_api_db
+id: mariadb_mysql
+name: MariaDB/MySql
+description: 'Lo stesso database del sito web'
+backend: search_api_db
+backend_config:
+  database: 'default:default'
+  min_chars: 3
+  matching: partial
+  phrase: bigram

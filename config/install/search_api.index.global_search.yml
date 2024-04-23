@@ -1,0 +1,215 @@
+langcode: it
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_argomenti
+    - field.storage.node.field_tipologia_servizio
+    - field.storage.node.field_tipologia_notizia
+    - search_api.server.mariadb_mysql
+    - core.entity_view_mode.node.search_index
+  module:
+    - node
+    - search_api
+id: global_search
+name: 'Global search'
+description: 'Indice di ricerca su tutti i contenuti del sito.'
+read_only: false
+field_settings:
+  field_argomenti:
+    label: Argomenti
+    datasource_id: 'entity:node'
+    property_path: field_argomenti
+    type: string
+    dependencies:
+      config:
+        - field.storage.node.field_argomenti
+  field_tipologia_notizia:
+    label: 'Tipologia notizia'
+    datasource_id: 'entity:node'
+    property_path: field_tipologia_notizia
+    type: string
+    dependencies:
+      config:
+        - field.storage.node.field_tipologia_notizia
+  field_tipologia_servizio:
+    label: 'Tipologia del servizio'
+    datasource_id: 'entity:node'
+    property_path: field_tipologia_servizio
+    type: string
+    dependencies:
+      config:
+        - field.storage.node.field_tipologia_servizio
+  node_grants:
+    label: 'Node access information'
+    property_path: search_api_node_grants
+    type: string
+    indexed_locked: true
+    type_locked: true
+    hidden: true
+  rendered_item:
+    label: 'Rendered HTML output'
+    property_path: rendered_item
+    type: text
+    configuration:
+      roles:
+        - anonymous
+      view_mode:
+        'entity:node':
+          article: search_index
+          circolare: search_index
+          classe: search_index
+          documento: search_index
+          evento: search_index
+          finanziamento: search_index
+          libro: search_index
+          luogo: search_index
+          page: search_index
+          partner: search_index
+          percorso_di_studio: search_index
+          persona: search_index
+          progetto: search_index
+          scheda_didattica: search_index
+          servizio: search_index
+          struttura_organizzativa: search_index
+  status:
+    label: status
+    datasource_id: 'entity:node'
+    property_path: status
+    type: boolean
+    indexed_locked: true
+    type_locked: true
+    dependencies:
+      module:
+        - node
+  title:
+    label: Titolo
+    datasource_id: 'entity:node'
+    property_path: title
+    type: text
+    boost: 21.0
+    dependencies:
+      module:
+        - node
+  type:
+    label: 'Tipo di contenuto'
+    datasource_id: 'entity:node'
+    property_path: type
+    type: string
+    dependencies:
+      module:
+        - node
+  uid:
+    label: uid
+    datasource_id: 'entity:node'
+    property_path: uid
+    type: integer
+    indexed_locked: true
+    type_locked: true
+    dependencies:
+      module:
+        - node
+datasource_settings:
+  'entity:node':
+    bundles:
+      default: true
+      selected:
+        - partner
+    languages:
+      default: true
+      selected: {  }
+processor_settings:
+  add_url: {  }
+  aggregated_field: {  }
+  content_access:
+    weights:
+      preprocess_query: -30
+  custom_value: {  }
+  entity_status: {  }
+  entity_type: {  }
+  highlight:
+    weights:
+      postprocess_query: 0
+    prefix: '<strong>'
+    suffix: '</strong>'
+    excerpt: true
+    excerpt_always: false
+    excerpt_length: 256
+    exclude_fields: {  }
+    highlight: always
+    highlight_partial: false
+  html_filter:
+    weights:
+      preprocess_index: -15
+      preprocess_query: -15
+    all_fields: false
+    fields:
+      - field_argomenti
+      - rendered_item
+      - title
+      - type
+    title: true
+    alt: true
+    tags:
+      b: 2
+      em: 1
+      h1: 5
+      h2: 3
+      h3: 2
+      strong: 2
+      u: 1
+  ignorecase:
+    weights:
+      preprocess_index: -20
+      preprocess_query: -20
+    all_fields: false
+    fields:
+      - field_argomenti
+      - rendered_item
+      - title
+      - type
+  language_with_fallback: {  }
+  rendered_item: {  }
+  tokenizer:
+    weights:
+      preprocess_index: -6
+      preprocess_query: -6
+    all_fields: false
+    fields:
+      - rendered_item
+      - title
+    spaces: ''
+    ignored: ._-
+    overlap_cjk: 1
+    minimum_word_size: '3'
+  transliteration:
+    weights:
+      preprocess_index: -20
+      preprocess_query: -20
+    all_fields: false
+    fields:
+      - field_argomenti
+      - rendered_item
+      - title
+      - type
+  type_boost:
+    weights:
+      preprocess_index: 0
+    boosts:
+      'entity:node':
+        datasource_boost: 1.0
+        bundle_boosts:
+          circolare: 1.2
+          classe: 0.5
+          documento: 0.7
+          libro: 0.3
+          luogo: 0.2
+          servizio: 2.0
+          struttura_organizzativa: 2.0
+tracker_settings:
+  default:
+    indexing_order: fifo
+options:
+  cron_limit: 50
+  index_directly: true
+  track_changes_in_references: true
+server: mariadb_mysql

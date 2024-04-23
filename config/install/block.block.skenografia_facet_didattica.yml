@@ -1,0 +1,28 @@
+langcode: it
+status: true
+dependencies:
+  config:
+    - facets.facet.didattica
+  module:
+    - facets
+    - system
+  theme:
+    - skenografia
+id: skenografia_facet_didattica
+theme: skenografia
+region: sidebar_first
+weight: -2
+provider: null
+plugin: 'facet_block:didattica'
+settings:
+  id: 'facet_block:didattica'
+  label: Didattica
+  label_display: visible
+  provider: facets
+  context_mapping: {  }
+  block_id: skenografia_facet_didattica
+visibility:
+  request_path:
+    id: request_path
+    negate: false
+    pages: /risultati-ricerca

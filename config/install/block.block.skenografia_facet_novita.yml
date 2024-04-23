@@ -1,0 +1,28 @@
+langcode: it
+status: true
+dependencies:
+  config:
+    - facets.facet.novita
+  module:
+    - facets
+    - system
+  theme:
+    - skenografia
+id: skenografia_facet_novita
+theme: skenografia
+region: sidebar_first
+weight: -4
+provider: null
+plugin: 'facet_block:novita'
+settings:
+  id: 'facet_block:novita'
+  label: Novità
+  label_display: visible
+  provider: facets
+  context_mapping: {  }
+  block_id: skenografia_facet_novita
+visibility:
+  request_path:
+    id: request_path
+    negate: false
+    pages: /risultati-ricerca

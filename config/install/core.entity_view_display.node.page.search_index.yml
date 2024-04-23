@@ -1,0 +1,40 @@
+langcode: it
+status: true
+dependencies:
+  config:
+    - core.entity_view_mode.node.search_index
+    - field.field.node.page.field_abstract
+    - field.field.node.page.field_copertina
+    - field.field.node.page.field_extra_info
+    - field.field.node.page.field_tipologia_sezione
+    - node.type.page
+  module:
+    - entity_reference_revisions
+    - user
+id: node.page.search_index
+targetEntityType: node
+bundle: page
+mode: search_index
+content:
+  field_abstract:
+    type: basic_string
+    label: hidden
+    settings: {  }
+    third_party_settings: {  }
+    weight: 0
+    region: content
+  field_extra_info:
+    type: entity_reference_revisions_entity_view
+    label: hidden
+    settings:
+      view_mode: default
+      link: ''
+    third_party_settings: {  }
+    weight: 1
+    region: content
+hidden:
+  field_copertina: true
+  field_tipologia_sezione: true
+  langcode: true
+  links: true
+  search_api_excerpt: true

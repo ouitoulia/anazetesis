@@ -1,0 +1,13 @@
+name: "Anazētēsis"
+description: "Anazētēsis è un modulo drupal che gestisce le configurazioni di Search API necessarie all'implementazione dell'architettura dei contenuti delle scuole."
+package: "Ouitoulía"
+
+type: module
+core_version_requirement: ^10
+dependencies:
+  - drupal:node
+  - drupal:views
+  - search_api:search_api
+  - search_api:search_api_db
+  - facets:facets
+
