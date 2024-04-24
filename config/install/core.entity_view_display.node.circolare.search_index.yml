@@ -11,7 +11,6 @@ dependencies:
     - field.field.node.circolare.field_attivo
     - field.field.node.circolare.field_data_oblio
     - field.field.node.circolare.field_destinatari
-    - field.field.node.circolare.field_documenti
     - field.field.node.circolare.field_eventi
     - field.field.node.circolare.field_numero_circolare
     - field.field.node.circolare.field_persona_responsabile
@@ -69,7 +68,6 @@ hidden:
   field_attivo: true
   field_data_oblio: true
   field_destinatari: true
-  field_documenti: true
   field_eventi: true
   langcode: true
   links: true
