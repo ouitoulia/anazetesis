@@ -39,7 +39,7 @@ content:
     third_party_settings: {  }
     weight: 0
     region: content
-  links:
+  search_api_excerpt:
     settings: {  }
     third_party_settings: {  }
     weight: 2
@@ -52,5 +52,5 @@ hidden:
   field_link: true
   field_telefono: true
   langcode: true
-  search_api_excerpt: true
+  links: true
   toc_js: true

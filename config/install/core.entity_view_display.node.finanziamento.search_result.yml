@@ -35,11 +35,31 @@ content:
     label: hidden
     settings: {  }
     third_party_settings: {  }
+    weight: 1
+    region: content
+  field_argomenti:
+    type: entity_reference_label
+    label: hidden
+    settings:
+      link: false
+    third_party_settings: {  }
+    weight: 3
+    region: content
+  field_tipologia_finanziamento:
+    type: entity_reference_label
+    label: hidden
+    settings:
+      link: false
+    third_party_settings: {  }
     weight: 0
+    region: content
+  search_api_excerpt:
+    settings: {  }
+    third_party_settings: {  }
+    weight: 2
     region: content
 hidden:
   body: true
-  field_argomenti: true
   field_codice_cup: true
   field_codice_identificativo: true
   field_collaborazioni: true
@@ -55,8 +75,6 @@ hidden:
   field_stato_progetto: true
   field_struttura_responsabile: true
   field_timeline: true
-  field_tipologia_finanziamento: true
   langcode: true
   links: true
-  search_api_excerpt: true
   toc_js: true

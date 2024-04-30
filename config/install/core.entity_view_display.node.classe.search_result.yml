@@ -23,14 +23,6 @@ targetEntityType: node
 bundle: classe
 mode: search_result
 content:
-  field_anno_scolastico:
-    type: entity_reference_label
-    label: inline
-    settings:
-      link: false
-    third_party_settings: {  }
-    weight: 0
-    region: content
   field_percorso_di_studio:
     type: entity_reference_label
     label: inline
@@ -39,7 +31,21 @@ content:
     third_party_settings: {  }
     weight: 1
     region: content
+  field_struttura_didattica:
+    type: entity_reference_label
+    label: inline
+    settings:
+      link: false
+    third_party_settings: {  }
+    weight: 2
+    region: content
+  search_api_excerpt:
+    settings: {  }
+    third_party_settings: {  }
+    weight: 0
+    region: content
 hidden:
+  field_anno_scolastico: true
   field_annualita_classe: true
   field_extra_info: true
   field_libri_di_testo: true
@@ -49,7 +55,5 @@ hidden:
   field_rappresentanti_alunni: true
   field_rappresentanti_genitori: true
   field_sezione: true
-  field_struttura_didattica: true
   langcode: true
   links: true
-  search_api_excerpt: true

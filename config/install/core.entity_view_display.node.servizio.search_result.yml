@@ -29,7 +29,7 @@ dependencies:
     - field.field.node.servizio.field_tipologia_autenticazione
     - field.field.node.servizio.field_tipologia_licenza
     - field.field.node.servizio.field_tipologia_servizio
-    - image.style.focal_point_thumbnail_3x_1_1_300x300_
+    - image.style.focal_point_thumbnail_1x_1_1_40x40_
     - node.type.servizio
   module:
     - media
@@ -44,18 +44,26 @@ content:
     label: hidden
     settings: {  }
     third_party_settings: {  }
-    weight: 1
+    weight: 2
+    region: content
+  field_argomenti:
+    type: entity_reference_label
+    label: hidden
+    settings:
+      link: false
+    third_party_settings: {  }
+    weight: 4
     region: content
   field_copertina:
     type: media_thumbnail
     label: hidden
     settings:
-      image_link: ''
-      image_style: focal_point_thumbnail_3x_1_1_300x300_
+      image_link: content
+      image_style: focal_point_thumbnail_1x_1_1_40x40_
       image_loading:
         attribute: lazy
     third_party_settings: {  }
-    weight: 2
+    weight: 1
     region: content
   field_tipologia_servizio:
     type: entity_reference_label
@@ -65,14 +73,13 @@ content:
     third_party_settings: {  }
     weight: 0
     region: content
-  links:
+  search_api_excerpt:
     settings: {  }
     third_party_settings: {  }
     weight: 3
     region: content
 hidden:
   field_a_cosa_serve: true
-  field_argomenti: true
   field_attivo: true
   field_azione: true
   field_casi_particolari: true
@@ -95,5 +102,5 @@ hidden:
   field_tipologia_autenticazione: true
   field_tipologia_licenza: true
   langcode: true
-  search_api_excerpt: true
+  links: true
   toc_js: true

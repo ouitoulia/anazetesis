@@ -12,6 +12,7 @@ dependencies:
     - field.field.node.circolare.field_data_oblio
     - field.field.node.circolare.field_destinatari
     - field.field.node.circolare.field_eventi
+    - field.field.node.circolare.field_link
     - field.field.node.circolare.field_numero_circolare
     - field.field.node.circolare.field_persona_responsabile
     - node.type.circolare
@@ -27,15 +28,15 @@ content:
     label: hidden
     settings: {  }
     third_party_settings: {  }
-    weight: 2
+    weight: 0
     region: content
   field_anno_scolastico:
     type: entity_reference_label
     label: hidden
     settings:
-      link: true
+      link: false
     third_party_settings: {  }
-    weight: 0
+    weight: 1
     region: content
   field_numero_circolare:
     type: number_integer
@@ -44,7 +45,17 @@ content:
       thousand_separator: ''
       prefix_suffix: true
     third_party_settings: {  }
-    weight: 1
+    weight: 2
+    region: content
+  links:
+    settings: {  }
+    third_party_settings: {  }
+    weight: 4
+    region: content
+  search_api_excerpt:
+    settings: {  }
+    third_party_settings: {  }
+    weight: 3
     region: content
 hidden:
   body: true
@@ -54,7 +65,6 @@ hidden:
   field_data_oblio: true
   field_destinatari: true
   field_eventi: true
+  field_link: true
   field_persona_responsabile: true
   langcode: true
-  links: true
-  search_api_excerpt: true

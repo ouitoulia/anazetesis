@@ -33,6 +33,7 @@ dependencies:
     - field.field.node.documento.field_tipologia_licenza
     - node.type.documento
   module:
+    - datetime
     - user
 id: node.documento.search_result
 targetEntityType: node
@@ -44,31 +45,62 @@ content:
     label: hidden
     settings: {  }
     third_party_settings: {  }
-    weight: 1
+    weight: 2
     region: content
   field_anno_scolastico:
     type: entity_reference_label
-    label: above
+    label: inline
     settings:
-      link: true
+      link: false
+    third_party_settings: {  }
+    weight: 5
+    region: content
+  field_argomenti:
+    type: entity_reference_label
+    label: hidden
+    settings:
+      link: false
+    third_party_settings: {  }
+    weight: 6
+    region: content
+  field_data_inizio:
+    type: datetime_default
+    label: hidden
+    settings:
+      timezone_override: ''
+      format_type: bootstrap_italia_medium
+    third_party_settings: {  }
+    weight: 1
+    region: content
+  field_protocollo:
+    type: string
+    label: hidden
+    settings:
+      link_to_entity: false
     third_party_settings: {  }
     weight: 0
     region: content
-  links:
+  field_tipologia_documento:
+    type: entity_reference_label
+    label: hidden
+    settings:
+      link: false
+    third_party_settings: {  }
+    weight: 4
+    region: content
+  search_api_excerpt:
     settings: {  }
     third_party_settings: {  }
-    weight: 2
+    weight: 3
     region: content
 hidden:
   body: true
   field_allegati: true
-  field_argomenti: true
   field_cig: true
   field_classi: true
   field_codice_identificativo: true
   field_copertina: true
   field_data_fine: true
-  field_data_inizio: true
   field_data_oblio: true
   field_eventi: true
   field_extra_info: true
@@ -80,12 +112,10 @@ hidden:
   field_percorso_di_studio: true
   field_persone: true
   field_progetti: true
-  field_protocollo: true
   field_servizio: true
   field_struttura_responsabile: true
   field_timeline: true
-  field_tipologia_documento: true
   field_tipologia_licenza: true
   langcode: true
-  search_api_excerpt: true
+  links: true
   toc_js: true

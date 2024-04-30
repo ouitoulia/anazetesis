@@ -35,18 +35,10 @@ content:
     third_party_settings: {  }
     weight: 0
     region: content
-  field_grado_di_istruzione:
-    type: entity_reference_label
-    label: above
-    settings:
-      link: true
-    third_party_settings: {  }
-    weight: 1
-    region: content
-  links:
+  search_api_excerpt:
     settings: {  }
     third_party_settings: {  }
-    weight: 2
+    weight: 1
     region: content
 hidden:
   field_a_cosa_serve: true
@@ -57,6 +49,7 @@ hidden:
   field_cosa_serve: true
   field_email: true
   field_extra_info: true
+  field_grado_di_istruzione: true
   field_indirizzo_di_studio: true
   field_persona_responsabile: true
   field_piano_di_studio: true
@@ -65,5 +58,5 @@ hidden:
   field_struttura_responsabile: true
   field_telefono: true
   langcode: true
-  search_api_excerpt: true
+  links: true
   toc_js: true

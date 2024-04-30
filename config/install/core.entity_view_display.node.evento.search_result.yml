@@ -26,7 +26,7 @@ dependencies:
     - field.field.node.evento.field_telefono
     - field.field.node.evento.field_timeline
     - field.field.node.evento.field_tipologia_evento
-    - image.style.focal_point_thumbnail_3x_1_1_300x300_
+    - image.style.focal_point_thumbnail_1x_1_1_40x40_
     - node.type.evento
   module:
     - datetime
@@ -42,16 +42,33 @@ content:
     label: hidden
     settings: {  }
     third_party_settings: {  }
-    weight: 0
+    weight: 3
+    region: content
+  field_argomenti:
+    type: entity_reference_label
+    label: hidden
+    settings:
+      link: false
+    third_party_settings: {  }
+    weight: 5
     region: content
   field_copertina:
     type: media_thumbnail
     label: hidden
     settings:
-      image_link: ''
-      image_style: focal_point_thumbnail_3x_1_1_300x300_
+      image_link: content
+      image_style: focal_point_thumbnail_1x_1_1_40x40_
       image_loading:
         attribute: lazy
+    third_party_settings: {  }
+    weight: 2
+    region: content
+  field_data_fine:
+    type: datetime_default
+    label: hidden
+    settings:
+      timezone_override: ''
+      format_type: bootstrap_italia_medium
     third_party_settings: {  }
     weight: 1
     region: content
@@ -62,18 +79,16 @@ content:
       timezone_override: ''
       format_type: bootstrap_italia_medium
     third_party_settings: {  }
-    weight: 2
+    weight: 0
     region: content
-  links:
+  search_api_excerpt:
     settings: {  }
     third_party_settings: {  }
-    weight: 3
+    weight: 4
     region: content
 hidden:
   body: true
-  field_argomenti: true
   field_collaborazioni: true
-  field_data_fine: true
   field_descrizione_destinatari: true
   field_destinatari: true
   field_email: true
@@ -91,5 +106,5 @@ hidden:
   field_timeline: true
   field_tipologia_evento: true
   langcode: true
-  search_api_excerpt: true
+  links: true
   toc_js: true

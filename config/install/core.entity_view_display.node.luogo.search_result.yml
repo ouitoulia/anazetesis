@@ -41,7 +41,7 @@ dependencies:
     - field.field.node.luogo.field_uso_scolastico
     - field.field.node.luogo.field_video
     - field.field.node.luogo.field_volume
-    - image.style.focal_point_thumbnail_3x_1_1_300x300_
+    - image.style.focal_point_thumbnail_1x_1_1_40x40_
     - node.type.luogo
   module:
     - media
@@ -56,20 +56,20 @@ content:
     label: hidden
     settings: {  }
     third_party_settings: {  }
-    weight: 0
+    weight: 1
     region: content
   field_copertina:
     type: media_thumbnail
-    label: above
+    label: hidden
     settings:
-      image_link: ''
-      image_style: focal_point_thumbnail_3x_1_1_300x300_
+      image_link: content
+      image_style: focal_point_thumbnail_1x_1_1_40x40_
       image_loading:
         attribute: lazy
     third_party_settings: {  }
-    weight: 1
+    weight: 0
     region: content
-  links:
+  search_api_excerpt:
     settings: {  }
     third_party_settings: {  }
     weight: 2
@@ -112,5 +112,5 @@ hidden:
   field_video: true
   field_volume: true
   langcode: true
-  search_api_excerpt: true
+  links: true
   toc_js: true

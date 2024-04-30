@@ -7,7 +7,7 @@ dependencies:
     - field.field.node.page.field_copertina
     - field.field.node.page.field_extra_info
     - field.field.node.page.field_tipologia_sezione
-    - image.style.focal_point_thumbnail_3x_1_1_300x300_
+    - image.style.focal_point_thumbnail_1x_1_1_40x40_
     - node.type.page
   module:
     - media
@@ -22,22 +22,26 @@ content:
     label: hidden
     settings: {  }
     third_party_settings: {  }
-    weight: 0
+    weight: 1
     region: content
   field_copertina:
     type: media_thumbnail
     label: hidden
     settings:
-      image_link: ''
-      image_style: focal_point_thumbnail_3x_1_1_300x300_
+      image_link: content
+      image_style: focal_point_thumbnail_1x_1_1_40x40_
       image_loading:
         attribute: lazy
     third_party_settings: {  }
-    weight: 1
+    weight: 0
+    region: content
+  search_api_excerpt:
+    settings: {  }
+    third_party_settings: {  }
+    weight: 2
     region: content
 hidden:
   field_extra_info: true
   field_tipologia_sezione: true
   langcode: true
   links: true
-  search_api_excerpt: true

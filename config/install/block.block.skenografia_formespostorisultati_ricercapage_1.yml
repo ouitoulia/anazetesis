@@ -4,19 +4,24 @@ dependencies:
   config:
     - views.view.risultati_ricerca
   module:
+    - system
     - views
   theme:
     - skenografia
-id: skenografia_search_api_search_form
+id: skenografia_formespostorisultati_ricercapage_1
 theme: skenografia
-region: header_center_search
-weight: -30
+region: title
+weight: -29
 provider: null
 plugin: 'views_exposed_filter_block:risultati_ricerca-page_1'
 settings:
   id: 'views_exposed_filter_block:risultati_ricerca-page_1'
   label: ''
-  label_display: visible
+  label_display: '0'
   provider: views
-  views_label: Cerca
-visibility: {  }
+  views_label: ''
+visibility:
+  request_path:
+    id: request_path
+    negate: false
+    pages: /risultati-ricerca

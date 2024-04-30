@@ -13,7 +13,7 @@ dependencies:
     - field.field.node.article.field_persona_responsabile
     - field.field.node.article.field_persone
     - field.field.node.article.field_tipologia_notizia
-    - image.style.focal_point_thumbnail_3x_1_1_300x300_
+    - image.style.focal_point_thumbnail_1x_1_1_40x40_
     - node.type.article
   module:
     - media
@@ -28,27 +28,39 @@ content:
     label: hidden
     settings: {  }
     third_party_settings: {  }
-    weight: 0
+    weight: 1
+    region: content
+  field_argomenti:
+    type: entity_reference_label
+    label: hidden
+    settings:
+      link: false
+    third_party_settings: {  }
+    weight: 3
     region: content
   field_copertina:
     type: media_thumbnail
     label: hidden
     settings:
-      image_link: ''
-      image_style: focal_point_thumbnail_3x_1_1_300x300_
+      image_link: content
+      image_style: focal_point_thumbnail_1x_1_1_40x40_
       image_loading:
         attribute: lazy
     third_party_settings: {  }
-    weight: 1
+    weight: 0
     region: content
   links:
+    settings: {  }
+    third_party_settings: {  }
+    weight: 4
+    region: content
+  search_api_excerpt:
     settings: {  }
     third_party_settings: {  }
     weight: 2
     region: content
 hidden:
   body: true
-  field_argomenti: true
   field_eventi: true
   field_extra_info: true
   field_luoghi: true
@@ -56,5 +68,4 @@ hidden:
   field_persone: true
   field_tipologia_notizia: true
   langcode: true
-  search_api_excerpt: true
   toc_js: true
