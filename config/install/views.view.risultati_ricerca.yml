@@ -156,7 +156,7 @@ display:
             operator_limit_selection: false
             operator_list: {  }
             identifier: ftxt
-            required: true
+            required: false
             remember: false
             multiple: false
             remember_roles:
