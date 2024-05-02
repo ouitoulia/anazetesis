@@ -11,7 +11,7 @@ dependencies:
 id: skenografia_facet_argomenti
 theme: skenografia
 region: sidebar_first
-weight: 10
+weight: -26
 provider: null
 plugin: 'facet_block:argomenti'
 settings:

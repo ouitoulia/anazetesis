@@ -66,11 +66,6 @@ content:
     third_party_settings: {  }
     weight: 2
     region: content
-  toc_js:
-    settings: {  }
-    third_party_settings: {  }
-    weight: 20
-    region: content
 hidden:
   body: true
   field_codice_fiscale: true
@@ -87,3 +82,4 @@ hidden:
   field_tipologia_posto: true
   field_tipologia_supplenza: true
   langcode: true
+  toc_js: true

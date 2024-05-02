@@ -11,7 +11,7 @@ dependencies:
 id: skenografia_facet_servizi
 theme: skenografia
 region: sidebar_first
-weight: -6
+weight: -29
 provider: null
 plugin: 'facet_block:servizi'
 settings:

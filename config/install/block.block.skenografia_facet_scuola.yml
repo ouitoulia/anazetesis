@@ -11,7 +11,7 @@ dependencies:
 id: skenografia_facet_scuola
 theme: skenografia
 region: sidebar_first
-weight: 0
+weight: -30
 provider: null
 plugin: 'facet_block:scuola'
 settings:

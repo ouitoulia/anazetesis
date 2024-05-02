@@ -11,7 +11,7 @@ dependencies:
 id: skenografia_facet_didattica
 theme: skenografia
 region: sidebar_first
-weight: -2
+weight: -27
 provider: null
 plugin: 'facet_block:didattica'
 settings:
