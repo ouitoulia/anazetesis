@@ -156,29 +156,29 @@ display:
             operator_limit_selection: false
             operator_list: {  }
             identifier: ftxt
-            required: false
+            required: true
             remember: false
             multiple: false
             remember_roles:
               authenticated: authenticated
               anonymous: '0'
-              personale_docente: '0'
-              personale_non_docente: '0'
-              personale_amministrativo: '0'
-              personale_tecnico: '0'
-              collaboratore: '0'
-              direttore_amministrativo_dsga_: '0'
-              amministrazione_sito: '0'
-              amministratore: '0'
-              capo_redattore: '0'
-              redattore: '0'
-              dirigente_scolastico: '0'
               ex_amministrativo: '0'
               ex_collaboratore: '0'
               ex_dirigente: '0'
               ex_docente: '0'
               ex_dsga: '0'
               ex_tecnico: '0'
+              personale_docente: '0'
+              personale_non_docente: '0'
+              collaboratore: '0'
+              direttore_amministrativo_dsga_: '0'
+              personale_amministrativo: '0'
+              personale_tecnico: '0'
+              amministrazione_sito: '0'
+              amministratore: '0'
+              capo_redattore: '0'
+              redattore: '0'
+              dirigente_scolastico: '0'
             expose_fields: false
             placeholder: ''
             searched_fields_id: search_api_fulltext_searched_fields
