@@ -2,14 +2,13 @@ langcode: it
 status: true
 dependencies:
   config:
-    - field.storage.node.field_argomenti
-    - field.storage.node.field_tipologia_servizio
-    - field.storage.node.field_tipologia_notizia
-    - search_api.server.mariadb_mysql
     - core.entity_view_mode.node.search_index
+    - field.storage.node.field_argomenti
+    - field.storage.node.field_tipologia_notizia
+    - field.storage.node.field_tipologia_servizio
+    - search_api.server.mariadb_mysql
   module:
     - node
-    - search_api
 id: global_search
 name: 'Global search'
 description: 'Indice di ricerca su tutti i contenuti del sito.'
