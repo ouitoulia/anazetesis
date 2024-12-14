@@ -11,8 +11,8 @@ dependencies:
   - search_api:search_api_db
   - facets:facets
 
-# Information added by GitHub Action packaging script on 2024-12-02
-version: '2.0.2'
+# Information added by GitHub Action packaging script on 2024-12-14
+version: '2.1.0'
 project: 'Anazetesis'
-datestamp: 1733174813
-message: ' fix deps'
+datestamp: 1734135110
+message: ' fix compatibility'
