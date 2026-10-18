@@ -24,7 +24,7 @@
     "prefer-stable": true,
     "require": {
         "drupal/core-recommended": ">=10.3",
-        "drupal/search_api": "^1.35",
-        "drupal/facets": "^2.0"
+        "drupal/search_api": "^1.42",
+        "drupal/facets": "^3.0"
     }
 }

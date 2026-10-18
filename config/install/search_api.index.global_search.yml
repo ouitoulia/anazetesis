@@ -14,6 +14,14 @@ name: 'Global search'
 description: 'Indice di ricerca su tutti i contenuti del sito.'
 read_only: false
 field_settings:
+  created:
+    label: 'Creato il'
+    datasource_id: 'entity:node'
+    property_path: created
+    type: date
+    dependencies:
+      module:
+        - node
   field_argomenti:
     label: Argomenti
     datasource_id: 'entity:node'
@@ -150,12 +158,10 @@ processor_settings:
     alt: true
     tags:
       b: 2
-      em: 1
       h1: 5
       h2: 3
       h3: 2
       strong: 2
-      u: 1
   ignorecase:
     weights:
       preprocess_index: -20
@@ -209,6 +215,7 @@ tracker_settings:
     indexing_order: fifo
 options:
   cron_limit: 50
+  delete_on_fail: true
   index_directly: true
   track_changes_in_references: true
 server: mariadb_mysql
