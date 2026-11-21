@@ -12,6 +12,6 @@ dependencies:
   - facets:facets
 
 # Information added by GitHub Action packaging script on 2026-11-21
-version: '2.3.0'
+version: '2.3.1'
 project: 'Anazetesis'
-datestamp: 1795269828
+datestamp: 1795271122
